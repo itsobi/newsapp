@@ -1,10 +1,14 @@
+import Header from "./components/Header";
 import Topbar from "./components/Topbar";
+import TopicsNavbar from "./components/TopicNavbar";
 
 function App() {
   return (
-    <div>
+    <>
       <Topbar />
-    </div>
+      <Header />
+      <TopicsNavbar />
+    </>
   );
 }
 

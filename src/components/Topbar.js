@@ -29,10 +29,10 @@ function Topbar() {
   const isDayTime = hours > 6 && hours < 20;
 
   return (
-    <div className="py-4 shadow-xl">
-      <div className="flex justify-around items-center">
+    <div className="py-2 shadow-md">
+      <div className="flex justify-between mx-auto lg: max-w-7xl">
         {/* Location */}
-        <div className="flex space-x-2">
+        <div className="flex space-x-2 text-gray-400">
           <p className="font-thin text-sm">{formatDate()}</p>
           <p className="font-thin text-sm">
             {ip.city}, {ip.region}
@@ -44,12 +44,13 @@ function Topbar() {
           )}
         </div>
 
-        {/* Right side logo */}
+        {/* Right side website */}
         <div>
           <a
             href="https://www.justobii.com"
             target="_blank"
             rel="noreferrer noopener"
+            className="hidden lg:inline-flex hover:text-yellow-400 transition-all ease-in-out font-semibold font"
           >
             justobii.com
           </a>
