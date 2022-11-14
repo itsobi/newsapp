@@ -16,25 +16,15 @@ function Topbar() {
     fetchIp();
   }, []);
 
-  const formatDate = () => {
-    const currentDate = new Date();
-    const month = currentDate.getMonth() + 1;
-    const day = currentDate.getDate();
-    const year = currentDate.getFullYear();
-
-    return `${month}/${day}/${year}`;
-  };
-
   const hours = new Date().getHours();
-  const isDayTime = hours > 6 && hours < 20;
+  const isDayTime = hours > 6 && hours < 18;
 
   return (
     <div className="py-2 shadow-md">
       <div className="flex justify-between mx-auto lg: max-w-7xl">
         {/* Location */}
         <div className="flex space-x-2 text-gray-400">
-          <p className="font-thin text-sm">{formatDate()}</p>
-          <p className="font-thin text-sm">
+          <p className="ml-4 lg:ml-0 font-thin text-sm">
             {ip.city}, {ip.region}
           </p>
           {isDayTime ? (
