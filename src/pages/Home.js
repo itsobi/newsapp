@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 
 function Home() {
   const [topArticles, setTopArticles] = useState([]);
+
   useEffect(() => {
     const fetchTopNews = async () => {
       const request = await fetch(
@@ -22,23 +23,29 @@ function Home() {
         <div className="grid grid-cols-3">
           {/* Main news story */}
           <div className="relative col-span-3 lg:col-span-2">
-            <img
-              className="object-contain rounded"
-              src={topArticles[0]?.urlToImage}
-              alt="article"
-            />
+            <a
+              href={topArticles[6]?.url}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img
+                className="object-contain rounded cursor-pointer"
+                src={topArticles[6]?.urlToImage}
+                alt="article"
+              />
+            </a>
             <div className="absolute bottom-4 md:bottom-20 lg:top-24 px-8 text-white max-w-[600px]">
               <p className="font-extralight">
                 <span className="font-semibold">
-                  {topArticles[0]?.source.name} /{" "}
+                  {topArticles[6]?.source.name} /{" "}
                 </span>
-                {topArticles[0]?.publishedAt.substring(0, 10)}
+                {topArticles[6]?.publishedAt.substring(0, 10)}
               </p>
               <h3 className="text-lg lg:text-2xl py-2 font-extrabold">
-                {topArticles[0]?.title}
+                {topArticles[6]?.title}
               </h3>
               {/* <p>{truncateString(topArticles[0]?.description, 50)}</p> */}
-              <p className="font-extralight">{topArticles[0]?.description}</p>
+              <p className="font-extralight">{topArticles[6]?.description}</p>
             </div>
           </div>
 

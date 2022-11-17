@@ -23,7 +23,7 @@ function Topbar() {
     <div className="py-2 shadow-md">
       <div className="flex justify-between mx-auto lg: max-w-7xl">
         {/* Location */}
-        <div className="flex space-x-2 text-gray-400">
+        <div className="flex space-x-2 text-black">
           <p className="ml-4 lg:ml-0 font-thin text-sm">
             {ip.city}, {ip.region}
           </p>
